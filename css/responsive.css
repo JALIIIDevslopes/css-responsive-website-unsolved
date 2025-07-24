@@ -20,15 +20,13 @@
     color: white;
   }
 
-  footer .social-icons div:hover {
-    .icon {
-      background-color: white;
-    }
+  footer .social-icons div:hover .icon {
+    background-color: white;
+  }
 
-    span {
-      color: white;
-      font-weight: bold;
-    }
+  footer .social-icons div:hover span {
+    color: white;
+    font-weight: bold;
   }
 
   .footer-contacts ul li a:hover {
@@ -36,7 +34,7 @@
     text-decoration: underline;
   }
 }
-/* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
+/* /* 👇👇👇 Add the media rule and the styles that are common within the TABLET and MOBILE views beneath 👇👇👇 */
 @media (min-width: 768px) AND (max-width: 1023px) {
   .logo-icon {
     width: 80px;
@@ -63,31 +61,37 @@
     flex-direction: row;
     gap: 20px;
   }
+
+  .portfolio-img-wrapper {
+    flex: 1;
+  }
   .portfolio-item-info {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
-
-    .item-title {
-      font-size: 24px;
-      font-weight: 500;
-    }
-
-    .item-description {
-      font-size: 20px;
-    }
   }
+
+  .item-title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+   .item-description {
+    font-size: 20px;
+  }
+
   .section-info {
     font-size: 24px;
-
-    .surrounded-header {
-      font-size: 48px;
-    }
-
-    h1 {
-      font-size: 60px;
-    }
   }
+  .section-info .surrounded-header {
+    font-size: 30px;
+  }
+
+  .section-info h1 {
+    font-size: 50px;
+  }
+
   .teammates-list,
   .teammates-list-wrapper {
     display: flex;
@@ -99,13 +103,13 @@
     display: none;
   }
   .teammate {
-    min-width: calc(50% - 30px);
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: auto;
   }
   .teammate-img-wrapper {
-    width: 100%;
+    width: 30vw;
     overflow: hidden;
   }
 
@@ -127,39 +131,46 @@
     background-color: darkgray;
     color: white;
   }
+  
   footer .social-icons {
     display: flex;
     gap: 30px;
     justify-content: center;
-
-    div {
-      width: 50px;
-      .icon {
-        width: 50px;
-        height: 50px;
-        background-color: white;
-      }
-
-      span {
-        display: none;
-      }
-    }
   }
+
+  footer .social-icons div {
+    width: 50px;
+  }
+
+  footer .social-icons div .icon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+  }
+
+  footer .social-icons div span {
+    display: none;
+  }
+
   .footer-contacts {
+    flex-direction: row;
     justify-content: space-evenly;
+    gap: 100px;
     flex-wrap: wrap;
-
-    div {
-      width: 400px;
-    }
-    h3,
-    p {
-      font-size: 18px;
-    }
-    ul li a {
-      color: white;
-    }
   }
+
+  .footer-contacts div {
+    width: 35vw;
+  }
+
+  .footer-contacts h3,
+  .footer-contacts p {
+    font-size: 18px;
+  }
+  .footer-contacts ul li a {
+    color: white;
+  }
+
   .footer-footer {
     font-size: 16px;
   }
@@ -188,27 +199,25 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+  }
+  .portfolio-item-info .item-title {
+    font-size: 24px;
+    font-weight: 500;
+  }
 
-    .item-title {
-      font-size: 24px;
-      font-weight: 500;
-    }
-
-    .item-description {
-      font-size: 20px;
-    }
+  .portfolio-item-info .item-description {
+    font-size: 20px;
   }
 
   .section-info {
     font-size: 24px;
+  }
+  .section-info .surrounded-header {
+    font-size: 48px;
+  }
 
-    .surrounded-header {
-      font-size: 48px;
-    }
-
-    h1 {
-      font-size: 60px;
-    }
+  .section-info h1 {
+    font-size: 60px;
   }
 
   .teammates-list,
@@ -223,25 +232,33 @@
   .teammate {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    justify-content: space-between;
     padding: 20px;
     border: 1px solid black;
   }
   .teammate-img-wrapper {
-    width: 50%;
+    width: 50vw;
     overflow: hidden;
   }
 
   .teammate-info {
+    flex: 2;
     font-size: 30px;
+    width: 45vw;
     gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   .teammate-data {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 20px;
+  }
+  .teammate-role {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .teammate-social-icons {
@@ -258,7 +275,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   footer .social-icons {
@@ -266,21 +283,21 @@
     flex-direction: column;
     gap: 30px;
     justify-content: center;
-    font-size: 24px;
+    font-size: 18px;
+  }
+  footer .social-icons div {
+    width: 100%;
+  }
 
-    div {
-      width: 100%;
-      .icon {
-        width: 25px;
-        height: 25px;
-        background-color: white;
-      }
+  footer .social-icons div .icon {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+  }
 
-      span {
-        color: white;
-        font-weight: bold;
-      }
-    }
+  footer .social-icons div span {
+    color: white;
+    font-weight: bold;
   }
 
   .footer-contacts {
@@ -288,25 +305,20 @@
     justify-content: space-evenly;
     align-items: center;
     gap: 20px;
-
-    div {
-      width: 100%;
-    }
-    h3,
-    p {
-      font-size: 18px;
-    }
-    ul li a {
-      color: white;
-    }
   }
+  .footer-contacts div {
+    width: 100%;
+  }
+
+  .footer-contacts h3,
+  .footer-contacts p {
+    font-size: 18px;
+  }
+  .footer-contacts ul li a {
+    color: white;
+  }
+
   .footer-footer {
     font-size: 16px;
-  }
-}
-
-@media (max-width: 359px) {
-  body {
-    display: none;
   }
 }

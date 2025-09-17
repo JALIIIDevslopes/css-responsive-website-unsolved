@@ -5,10 +5,10 @@
 */
 
 @media (min-width: 1024px) {
-  .top-navigation .trigram {
+ /*  .top-navigation .trigram {
     display: none;
   }
-
+ */
   .top-navigation ul li a:hover {
     text-decoration: none;
     color: black;
@@ -225,8 +225,8 @@
     display: flex;
     flex-direction: column;
   }
-  .teammates-list:before,
-  .teammates-list:after {
+  .teammates-list::before,
+  .teammates-list::after {
     display: none;
   }
   .teammate {

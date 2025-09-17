@@ -198,8 +198,8 @@ body {
   font-weight: normal;
 }
 
-.surrounded-header:before,
-.surrounded-header:after {
+.surrounded-header::before,
+.surrounded-header::after {
   content: "";
   width: 20px;
   height: 1px;
